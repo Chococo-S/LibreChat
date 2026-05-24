@@ -11,6 +11,8 @@ memory:
 
 interface:
   modelSelect: true
+  parameters: true
+  presets: true
 
 modelSpecs:
   enforce: false
@@ -20,7 +22,6 @@ modelSpecs:
   list:
     - name: "gpt-5_4-tight"
       label: "GPT-5.4（空行ひかえめ）"
-      description: "GPT-5.4 with tighter paragraph spacing"
       group: "openAI"
       preset:
         endpoint: "openAI"
