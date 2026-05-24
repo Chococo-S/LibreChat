@@ -9,18 +9,23 @@ memory:
     provider: "openAI"
     model: "gpt-5.4-mini"
 
+interface:
+  modelSelect: true
+
 modelSpecs:
   enforce: false
-  prioritize: true
+  prioritize: false
+  addedEndpoints:
+    - "openAI"
   list:
     - name: "gpt-5_4-tight"
       label: "GPT-5.4（空行ひかえめ）"
-      default: true
       description: "GPT-5.4 with tighter paragraph spacing"
       group: "openAI"
       preset:
         endpoint: "openAI"
         model: "gpt-5.4"
         promptPrefix: |
+          回答は自然な会話文で続けて書いてください。
           改行のたびに空行を入れないでください。
           空行は段落や話題の切れ目にだけ使ってください。
